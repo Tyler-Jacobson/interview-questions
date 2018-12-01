@@ -1,0 +1,15 @@
+{
+  "name": "mr-js-peer-coding",
+  "version": "1.0.0",
+  "description": "MindRight JavaScript Software Engineering Peer Coding",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha app"
+  },
+  "author": "Sirrele <sirrele@getmindright.org> (www.getmindright.org)",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^5.2.0",
+    "chai": "^4.2.0"
+  }
+}
