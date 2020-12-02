@@ -1,0 +1,49 @@
+Question Discussion Guide:
+
+General: 
+- use "npm run test" to see results 
+  - (still undecided if this should only be done once, or at end of each hour session.)
+- Emphasize the "Testing Code (don't change)" comments and overall 19 questions layout before starting
+- I think Question 19 is the best of the hardest, finishing questions because it addresses recursion and navigating an object.
+  - Try to at least get to that, even if it means skipping 18 and/or others.
+
+
+Questions:
+2. 
+  - Expect student to use "hoisting" in their answer. 
+  - Discuss whether "const" and "let" would work too
+    - "let" is the harder to answer one, bc it will throw a "ReferenceError," instead of "undefined"
+    - Can also question function scoping (var) vs block level scoping (let).
+
+3. Make sure to check for off-by-one errors since the auto tests won't catch that!
+
+5. Constructor Function can be two answers:
+  - A stand-alone function that uses the "this" keyword to generate a new object when called w/ "new"
+  - Or the constructor as part of a class 
+
+6. Best answers would mention the difference between "pass by reference" and "pass by value," or similar.
+
+8. 
+  - Feel free to help student with inputs for "split" method if they are new to it (should be empty string as token).
+  - Most concise answer would use "split," "reverse," and "join".
+
+9. Can discuss, or try to elicit, the reason that functional programming works in JS is because functions are objects. 
+
+10. 
+  - Probably the most confusing question, so be ready to explain the example code.
+  - NOTE: Make sure student skips over the automated testing code right after the above example code and continues to their answer area.
+
+11. 
+  - Best answers will mention "instance variables" (variables for each called function) vs "static variables" (variables for the class/function as a whole).
+  - Although this is not a huge JS concept.
+
+12. Feel free to help student with "switch" syntax because the next two questions rely on it.
+
+13./14. 
+  - The requirement that each entry in the lookup table be a function may not be immediately obvious.
+  - Good test for stress and/or close-reading of instructions 
+
+15. "Filter Out" terminology is usually confusing here. Guide if needed.
+
+16. Will have to use "this" to complete. Good time for prototype discussion.
+

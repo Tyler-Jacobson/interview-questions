@@ -1,0 +1,18 @@
+FOR SIRRELE
+
+Questions Changed: 1, 2 (6), 18
+
+Added Additional Instructions/Comments: 13, 16
+
+Sparse or confusing directions: 10, 14, 19
+
+
+
+Further Notes: 
+
+Time: 2 - 2.5 hours. Prob split in two segments.
+
+3. Off-by-one errors will not cause an error. 
+
+19. Best question, imo. Would be good to move up in the order.
+
