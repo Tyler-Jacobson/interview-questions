@@ -1,10 +1,11 @@
 Question Discussion Guide:
 
 General: 
+- use 'npm install' to install necessary node_modules/dependencies 
 - use "npm run test" to see results 
-  - (still undecided if this should only be done once, or at end of each hour session.)
+  - (up to your discretion to do this just at end or also in beginning to demonstrate or in middle to get results after first session)
 - Emphasize the "Testing Code (don't change)" comments and overall 19 questions layout before starting
-- I think Question 19 is the best of the hardest, finishing questions because it addresses recursion and navigating an object.
+- Question 19 is the best of the hardest, finishing questions because it addresses recursion and navigating an object.
   - Try to at least get to that, even if it means skipping 18 and/or others.
 
 
@@ -43,7 +44,7 @@ Questions:
   - The requirement that each entry in the lookup table be a function may not be immediately obvious.
   - Good test for stress and/or close-reading of instructions 
 
-15. "Filter Out" terminology is usually confusing here. Guide if needed.
+15. "Filter Out" terminology is usually confusing here. Guide if needed (the answer should keep the larger numbers).
 
 16. Will have to use "this" to complete. Good time for prototype discussion.
 
