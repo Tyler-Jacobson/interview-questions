@@ -45,7 +45,7 @@ describe('Yay to JavaScript Software Engineers!', function () {
   it('should be able to write a for loop (3)', function () {
     // TODO: write a 'for' loop which sums the EVEN numbers in the range [1 to 50] (inclusive)
     var sum = 0
-    for (i = 0; i <= 50; i++) {
+    for (var i = 0; i <= 50; i++) {
       if (i % 2 === 0) {
         console.log(i)
         sum += i
@@ -123,6 +123,22 @@ describe('Yay to JavaScript Software Engineers!', function () {
     // TODO: Write a function called "palindrome" which tests an input string to determine whether it is the same forwards and backwards.
     // Try using split instead of a recursive function
     
+    function return_backwards(arr) {
+      var newArr = [];
+      // I decided to start at the end of the array and decrement to 0 since that honestly makes it way simpler
+      for (var i = arr.length; i > 0; i--) {
+          newArr.push(arr[i - 1])
+      }
+      return newArr
+    }
+
+    function palindrome(str) {
+      // str = "rats live on no evil star"
+      var str_array = str.split("").filter(str_element => str_element != " ")
+      var backwards = return_backwards(str_array)
+
+      return JSON.stringify(backwards) == JSON.stringify(str_array) ? true : false
+    }
 
     expect(palindrome('rats live on no evil star')).to.be.true;
     expect(palindrome('this is not a palindrome')).to.be.false;
@@ -133,7 +149,21 @@ describe('Yay to JavaScript Software Engineers!', function () {
     // TODO: Write a function called "remember()" which captures some original value and produces a function which
     // returns true if the parameter matches the original value. Think password verification.
     // Be careful not to leak the secret to the caller, but only return if it's right or not.
+
     
+    function remember(value){
+      function check_equal(new_value) {
+        if (value === new_value) {
+          return true
+        } else {
+          return false
+        }
+      }
+      return check_equal
+    }
+    // Full disclosure: I wasn't aware of this before now. It's super cool though ^^
+    // I used this page to learn more about it https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+    // CTRL F for "Preservation of variables"
 
 
     //Testing Code (don't change):
@@ -178,8 +208,11 @@ describe('Yay to JavaScript Software Engineers!', function () {
     function doWorkWithCallbacks(value, done, fail) {
       // TODO: Re-define the body here so that rather than returning a boolean,
       // it invokes a callback: done for true, and fail for false.
-      
-
+      if (value > 10) {
+        return done()
+      } else {
+        return fail()
+      }
     }
 
     //Testing Code (don't change):
@@ -187,6 +220,24 @@ describe('Yay to JavaScript Software Engineers!', function () {
 
     expect(spyValue).to.equal(1);
     expect(failSpyValue).to.equal(0);
+
+    // I was confused by the above question for a while, so I wrote this as a random example of a callback. I figure I'll just leave it here
+
+    // function increment(number) {
+    //   return number + 1
+    // }
+
+    // function triple(number) {
+    //   return number * 3
+    // }
+
+    // function doOperation(number, operation) {
+    //   operation(number)
+    // }
+
+    // doOperation(10, increment)
+    // doOperation(15, triple)
+
   });
 
   //QUESTION 11
@@ -194,7 +245,15 @@ describe('Yay to JavaScript Software Engineers!', function () {
     // TODO: Write a function called "maker()" which produces a function which counts the number of times it has been
     // called and returns that value. (Two instances of the function should NOT share the same count.)
     
+    function maker(){
+      var val = 0
+      function add_one() {
+        return val += 1
+      }
+      return add_one
+    }
 
+    // Yet again, don't fully understand this, but I would definitely like to ^
 
     //Testing Code (don't change):
     let func = maker();
