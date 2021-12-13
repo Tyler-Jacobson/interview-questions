@@ -271,8 +271,14 @@ describe('Yay to JavaScript Software Engineers!', function () {
     // The function should have a single return statement.
     function translate(number) {
       //Make switch statement here:
-
-
+      switch (number) {
+        case 1: return "one" 
+        case 2: return "two"
+        case 3: return "three"
+        case 4: return "four"
+      }
+      // Also my first introduction to this. Seems like you'd want to avoid the types of problems this solves as much as possible.
+      // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
     }
 
     expect(translate(1)).to.equal('one');
@@ -402,12 +408,18 @@ describe('Yay to JavaScript Software Engineers!', function () {
     // Basic Sequence: 0 1 1 2 3 5 8 13
     // Index:          0 1 2 3 4 5 6 7
 
-    function fib(number) {
+    function fib(desired_index, current_index = 1, old_number = 0, current_number = 1) {
       // TODO: Add code here:
       // Note: The first two index values can be seeded (ie set manually / hard-coded in)
+      const new_number = old_number + current_number
 
-
+      if (current_index >= desired_index) {
+        return current_number
+      } else {
+        return fib(desired_index, current_index + 1, current_number, new_number)
+      }
     }
+    // The last few questions above this one are pretty unfamiliar territory for me. I really enjoy recursion though, and I'm hoping to learn more and use it in some larger projects
 
     expect(fib(5)).to.equal(5);
     expect(fib(2)).to.equal(1);
@@ -486,3 +498,6 @@ describe('Yay to JavaScript Software Engineers!', function () {
     expect(employee_count(org_chart.root)).to.equal(20);
   });
 });
+
+
+
